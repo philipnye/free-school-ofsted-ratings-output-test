@@ -4,3 +4,5 @@ scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation
 print "dogs"
 if 'MORPH_SECRET'=="test":
   print "woop"
+if 'MORPH_SECRETz':
+  print "hmm"
