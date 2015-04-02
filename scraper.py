@@ -21,7 +21,7 @@ auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ[
 auth.set_access_token(os.environ['MORPH_TWITTER_ACCESS_TOKEN'], os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET'])
 api = tweepy.API(auth)
  
-filename=open('dummy_tweets.txt','r')
+filename=open('https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-output-test/master/dummy_tweets.txt','r')
 f=filename.readlines()
 filename.close()
  
