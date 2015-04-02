@@ -5,7 +5,8 @@ import tweepy, time, sys
 import os
 
 print os.getcwd()
-print os.pardir()
+os.pardir
+print os.getcwd()
 
 # if 'MORPH_SECRET' in os.environ:
 # os.environ['MORPH_TWITTER_CONSUMER_KEY']
