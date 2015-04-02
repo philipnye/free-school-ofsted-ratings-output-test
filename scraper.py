@@ -3,11 +3,7 @@
  
 import tweepy, time, sys
 import os
-<<<<<<< HEAD
 import urllib2
-=======
-import requests
->>>>>>> origin/master
 
 print os.getcwd()
 print os.listdir(os.getcwd())
@@ -30,9 +26,6 @@ ACCESS_SECRET = '1234abcd...'#keep the quotes, replace this with your access tok
 auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ['MORPH_TWITTER_CONSUMER_SECRET'])
 auth.set_access_token(os.environ['MORPH_TWITTER_ACCESS_TOKEN'], os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET'])
 api = tweepy.API(auth)
-
-for line in f:
-    print line
  
 data = urllib2.urlopen("https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-output-test/master/dummy_tweets.txt")
 for line in data:
