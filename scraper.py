@@ -3,8 +3,10 @@
  
 import tweepy, time, sys
 import os
+from os import listdir
 
 print os.getcwd()
+print listdir(os.getcwd())
 
 # if 'MORPH_SECRET' in os.environ:
 # os.environ['MORPH_TWITTER_CONSUMER_KEY']
