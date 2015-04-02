@@ -5,7 +5,7 @@ import tweepy, time, sys
 import os
 
 print os.getcwd()
-os.pardir
+cd os.pardir
 print os.getcwd()
 
 # if 'MORPH_SECRET' in os.environ:
