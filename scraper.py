@@ -11,7 +11,7 @@ import os
 # os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET']
  
 # argfile = str(sys.argv[1])
-argfile = "dummy_tweets.txt"
+# argfile = "dummy_tweets.txt"
  
 CONSUMER_KEY = '1234abcd...'#keep the quotes, replace this with your consumer key
 CONSUMER_SECRET = '1234abcd...'#keep the quotes, replace this with your consumer secret key
@@ -21,7 +21,7 @@ auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ[
 auth.set_access_token(os.environ['MORPH_TWITTER_ACCESS_TOKEN'], os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET'])
 api = tweepy.API(auth)
  
-filename=open(argfile,'r')
+filename=open('dummy_tweets.txt','r')
 f=filename.readlines()
 filename.close()
  
