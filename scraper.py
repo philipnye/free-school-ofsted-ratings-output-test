@@ -3,6 +3,7 @@
  
 import tweepy, time, sys
 import os
+import urllib2
 
 print os.getcwd()
 
@@ -23,10 +24,8 @@ auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ[
 auth.set_access_token(os.environ['MORPH_TWITTER_ACCESS_TOKEN'], os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET'])
 api = tweepy.API(auth)
  
-filename=open('dummy_tweets.txt','r')
-f=filename.readlines()
-filename.close()
- 
-for line in f:
+data = urllib2.urlopen("https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-output-test/master/dummy_tweets.txt")
+for line in data:
+    print line
     api.update_status(line)
-    time.sleep(180)#Tweet every 15 minutes
+    time.sleep(180)#Tweet every 3 minutes
