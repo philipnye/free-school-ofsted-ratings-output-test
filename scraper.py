@@ -16,13 +16,6 @@ print os.path.dirname(os.path.dirname(os.getcwd()))
 # os.environ['MORPH_TWITTER_ACCESS_TOKEN']
 # os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET']
  
-# argfile = str(sys.argv[1])
-# argfile = "dummy_tweets.txt"
- 
-CONSUMER_KEY = '1234abcd...'#keep the quotes, replace this with your consumer key
-CONSUMER_SECRET = '1234abcd...'#keep the quotes, replace this with your consumer secret key
-ACCESS_KEY = '1234abcd...'#keep the quotes, replace this with your access token
-ACCESS_SECRET = '1234abcd...'#keep the quotes, replace this with your access token secret
 auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ['MORPH_TWITTER_CONSUMER_SECRET'])
 auth.set_access_token(os.environ['MORPH_TWITTER_ACCESS_TOKEN'], os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET'])
 api = tweepy.API(auth)
@@ -31,4 +24,4 @@ data = urllib2.urlopen("https://raw.githubusercontent.com/philipnye/free-school-
 for line in data:
     print line
     api.update_status(line)
-    time.sleep(180)#Tweet every 3 minutes
+    time.sleep(180) #Tweet every 3 minutes
