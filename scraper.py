@@ -16,7 +16,7 @@ print os.path.dirname(os.path.dirname(os.getcwd()))
 # os.environ['MORPH_TWITTER_ACCESS_TOKEN']
 # os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET']
  
-auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ['MORPH_TWITTER_CONSUMER_SECRET'], secure=True)
+auth = tweepy.OAuthHandler(os.environ['MORPH_TWITTER_CONSUMER_KEY'], os.environ['MORPH_TWITTER_CONSUMER_SECRET'])
 auth.set_access_token(os.environ['MORPH_TWITTER_ACCESS_TOKEN'], os.environ['MORPH_TWITTER_ACCESS_TOKEN_SECRET'])
 api = tweepy.API(auth)
  
