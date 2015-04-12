@@ -19,7 +19,7 @@ api = tweepy.API(auth)
 import csv
 with open('https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-output-test/master/dummy_tweets.csv', 'rb') as csvfile:
 	dummy_tweet_reader= csv.reader(csvfile, dialect='excel')
-    for row in dummy_tweet_reader:
+	for row in dummy_tweet_reader:
     	print row
 
 with open('https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-output-test/master/dummy_tweets.csv', 'wb') as csvfile2:
