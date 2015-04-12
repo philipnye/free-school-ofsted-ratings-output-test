@@ -24,5 +24,5 @@ with open('dummy_tweets.csv', 'rb') as dummy_tweets:
 
 with open('dummy_tweets.csv', 'wb') as dummy_tweets2:
 	dummy_tweet_writer = csv.writer(dummy_tweets2)
-	dummy_tweet_writer.writerow(["5 April 2015"] ["No"]+["Rating"]+ ["New rating - Nottingham University Academy of Science and Technology - requires improvement http://philipnye.github.io/free-school-ofsted-ratings/ http://pic.twitter.com/1LPfQIF7wr"])
-	dummy_tweet_writer.writerow(["5 April 2015"] ["No"]+["Summary"]+ ["Updated - overall 51 out of 77 open, inspected free schools, or 64%, are rated good or better http://philipnye.github.io/free-school-ofsted-ratings/ http://pic.twitter.com/1LPfQIF7wr"])
+	dummy_tweet_writer.writerow(["5 April 2015"] +["No"]+["Rating"]+ ["New rating - Nottingham University Academy of Science and Technology - requires improvement http://philipnye.github.io/free-school-ofsted-ratings/ http://pic.twitter.com/1LPfQIF7wr"])
+	dummy_tweet_writer.writerow(["5 April 2015"] +["No"]+["Summary"]+ ["Updated - overall 51 out of 77 open, inspected free schools, or 64%, are rated good or better http://philipnye.github.io/free-school-ofsted-ratings/ http://pic.twitter.com/1LPfQIF7wr"])
