@@ -17,12 +17,12 @@ api = tweepy.API(auth)
 #     time.sleep(180) #Tweet every 3 minutes
 
 import csv
-with open('https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-twitter-bot/master/dummy_tweets.csv', 'rb') as csvfile:
-	dummy_tweet_reader= csv.reader(csvfile, dialect='excel')
+with open('dummy_tweets.csv', 'rb') as dummy_tweets:
+	dummy_tweet_reader= csv.reader(dummy_tweets, dialect='excel')
 	for row in dummy_tweet_reader:
 		print row
 
-with open('https://raw.githubusercontent.com/philipnye/free-school-ofsted-ratings-twitter-bot/master/dummy_tweets.csv', 'wb') as csvfile2:
-	dummy_tweet_writer = csv.writer(csvfile2)
+with open('dummy_tweets.csv', 'wb') as dummy_tweets2:
+	dummy_tweet_writer = csv.writer(dummy_tweets2)
 	dummy_tweet_writer.writerow(["5 April 2015"] ["No"]+["Rating"]+ ["New rating - Nottingham University Academy of Science and Technology - requires improvement http://philipnye.github.io/free-school-ofsted-ratings/ http://pic.twitter.com/1LPfQIF7wr"])
 	dummy_tweet_writer.writerow(["5 April 2015"] ["No"]+["Summary"]+ ["Updated - overall 51 out of 77 open, inspected free schools, or 64%, are rated good or better http://philipnye.github.io/free-school-ofsted-ratings/ http://pic.twitter.com/1LPfQIF7wr"])
